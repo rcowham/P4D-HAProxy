@@ -1,0 +1,20 @@
+version: "2"
+
+services:        
+    master:
+        build: helix-p4d
+        hostname: master
+        domainname: master
+        ports:
+        - "2199:1999"
+        command: systemctl start p4d_1 && sleep infinity
+
+    haproxy:
+        build: haproxy
+        depends_on:
+        - master
+        hostname: haproxy
+        domainname: haproxy
+        ports:
+        - "2188:5000"
+        - "2189:5001"
