@@ -13,7 +13,9 @@ You can then connect as follows (in a different terminal), using ports:
 * localhost:2188 -> via HA Proxy container with no SSL
 * localhost:2189 -> via HA Proxy container and SSL
   
-Note that we use a version of the (https://swarm.workshop.perforce.com/projects/perforce_software-helix-installer/)[SDP Helix Installer project] which installs the (https://community.perforce.com/s/article/2439)[sampledepot] for easy testing.
+Note that we use a version of the [SDP Helix Installer project](https://swarm.workshop.perforce.com/projects/perforce_software-helix-installer/) which installs the [sampledepot](https://community.perforce.com/s/article/2439) for easy testing.
+
+See the ports defined/forwarded in [docker-compose.yml](docker-compose.yml).
 
 First you can connect direct to p4d (no SSL):
 
