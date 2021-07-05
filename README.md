@@ -15,8 +15,17 @@ You can then connect as follows (in a different terminal), using ports:
   
 Note that we use a version of the (https://swarm.workshop.perforce.com/projects/perforce_software-helix-installer/)[SDP Helix Installer project] which installs the (https://community.perforce.com/s/article/2439)[sampledepot] for easy testing.
 
+First you can connect direct to p4d (no SSL):
+
     p4 -p 2199 info
+
+Then via HAPRoxy with no SSL:
+
     p4 -p 2188 info
+
+Then via HAProxy with SSL:
+
     p4 -p ssl:2189 trust -y
     p4 -p ssl:2189 info
 
+Please note user `perforce` and password `F@stSCM!` if you want to look around in the repo.
